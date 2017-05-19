@@ -11,7 +11,7 @@
 
 - name: create openvpn config file
   template:
-    src: server.conf.j2
+    src: "{{openvpn_server_template}}"
     dest: "/etc/openvpn/{{openvpn_config_file}}.conf"
     owner: root
     group: root
