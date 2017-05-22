@@ -44,9 +44,6 @@
   with_items: "{{clients}}"
   register: client_keys
 
-- debug:
-  var: openvpn_client_template
-
 - name: generate client config
   template:
     src: "{{openvpn_client_template}}"
